@@ -1,0 +1,48 @@
+---
+title: "Demo_Repo - How to set up Github"
+author: "Marina Papaiakovou"
+date: "1/24/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+library(usethis) #for nice interactions with Git/Github
+library(gitcredits) #for functions that help set up a PAT 
+library(credentials)
+library(gert)
+library(gh)
+
+use_git_config(user.name = "MarinaSci", user.email = "mpapaiakovou@gmail.com") #you don't have to use the same Github name - definitely use the same email 
+
+
+#create a github token - save it somewhere, it will expire for security reasons 
+
+create_github_token() #it will take you to the home page, create a new token 
+gitcreds_set() #you will paste your PAT there 
+
+#sudo scutil --set HostName your_new_name - I used this so I can change the name of my computer in the terminal - my iphone was appearing, 
+#apparently it's harmless 
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
