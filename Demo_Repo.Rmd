@@ -29,6 +29,8 @@ gitcreds_set() #you will paste your PAT there
 #apparently it's harmless 
 
 
+#When you commit - add comments that start with a verb -- then commit, then push - as long as you don't have an error coming up, you can close the window - then the file should appear on your github 
+
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
